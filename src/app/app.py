@@ -1,9 +1,8 @@
-import json
-from flask import Flask
+from flask import Flask, jsonify
 app = Flask(__name__)
 @app.route("/")
 def index():
-    return json.dumps(
+    return jsonify(
         {'company': 'CGI',
          'email': 'mail@cgi.com'
          }
